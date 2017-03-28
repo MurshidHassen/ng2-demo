@@ -1,4 +1,5 @@
+.mdl-textfield__label {top: 0;}
 
 .selected {
-	background: red;
+  background : red;
 }

@@ -9,6 +9,7 @@ import { CelebrityComponent } from './celebrity/celebrity.component';
 import { CardComponent } from './card/card.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TitleDirective } from './common/title.directive';
+import { CustomButtonComponent } from './common/custombutton/custombutton.component';
 
 import { CelebrityService } from './celebrity/celebrity.service';
 
@@ -19,7 +20,8 @@ import { CelebrityService } from './celebrity/celebrity.service';
     CelebrityComponent,
     CardComponent,
     DashboardComponent,
-    TitleDirective
+    TitleDirective,
+    CustomButtonComponent
   ],
   imports: [
     BrowserModule,
