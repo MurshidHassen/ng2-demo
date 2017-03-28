@@ -1,25 +1,25 @@
-import {Component} from '@angular/core' ;
+import { Component } from '@angular/core';
 
+import { CelebrityService } from '../celebrity/celebrity.service';
+import { Celebrity } from '../celebrity/celebrity';
 
 @Component({
-	selector : 'celebrity-component',
-	templateUrl : 'celebrity.component.html',
-	styleUrls : ['celebrity.component.css']
+	selector: 'celebrity-component',
+	templateUrl: 'celebrity.component.html',
+	styleUrls: ['celebrity.component.css']
 })
 
 export class CelebrityComponent {
-
-	celebrity = {
-		name : 'Krishnakripa Jayakumar',
-		link : 'http://www.facebook.com/kripa.jayakumar',
-		image : 'https://img.clipartfest.com/e02b532333ff6c93ba470d1b7989b76c_girl-winking-winking-girl-clipart_256-256.png',
-		image2 : 'http://www.clker.com/cliparts/Q/r/R/t/o/t/school-boy-md.png'
-	};
-
+	celebrity: Celebrity;
 	isSelected = true;
+
+	celebrities: Celebrity[];
+	constructor(private celebService: CelebrityService) {
+		this.celebrities = celebService.getData();
+		this.celebrity = this.celebrities[0];
+	}
 
 	changeColor = function () {
 		this.isSelected = !this.isSelected;
 	}
-
 }
